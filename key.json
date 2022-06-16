@@ -1,0 +1,15 @@
+// Obtain key.json from yc
+
+// yc iam service-account create --name <service-account-name>
+
+// yc resource-manager folder add-access-binding <folder-id> \
+//    --role editor \
+//    --subject serviceAccount:<service-account-id>
+
+// yc iam access-key create --service-account-name <service-account-name>
+
+// yc iam key create --service-account-name <service-account-name> --output key.json
+
+// yc config profile create <profile-name>
+
+// yc config set service-account-key key.json
